@@ -105,23 +105,11 @@ case 2:
                         System.out.println("Current Balance: ₹" + account.balance);
                     }
                     break;
-           case 5:
-                    System.out.print("Enter Account ID: ");
-                    id = sc.nextInt();
-
-                    account = accounts.get(id);
-
-                    if (account == null) {
-                        System.out.println("Account Not Found!");
-                    } else {
-                        System.out.println("\n----- ACCOUNT DETAILS -----");
-                        account.display();
-                    }
-                    break;
+           
 
 
                     
-                                 case 6:
+                                 case 5:
                     System.out.println("Thank You!");
                     sc.close();
                     return;
