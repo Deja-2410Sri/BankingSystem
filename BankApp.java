@@ -105,10 +105,6 @@ case 2:
                         System.out.println("Current Balance: ₹" + account.balance);
                     }
                     break;
-                    case 5:
-                    System.out.println("Thank You!");
-                    sc.close();
-                    return;
 
                 default:
                     System.out.println("Invalid Choice!");
