@@ -44,7 +44,54 @@ public class BankApp {
                     System.out.println("Account Created Successfully!");
                     break;
 
-                case 2:
+case 2:
+                    System.out.print("Enter Account ID: ");
+                    id = sc.nextInt();
+
+                    Account depositAccount = accounts.get(id);
+
+                    if (depositAccount == null) {
+                        System.out.println("Account Not Found!");
+                    } else {
+                        System.out.print("Enter Deposit Amount: ");
+                        double amount = sc.nextDouble();
+
+                        if (amount > 0) {
+                            depositAccount.deposit(amount);
+                            System.out.println("Deposit Successful!");
+                            System.out.println("Current Balance: ₹"
+                                    + depositAccount.getBalance());
+                        } else {
+                            System.out.println("Invalid Amount!");
+                        }
+                    }
+                    break;
+
+                case 3:
+                    System.out.print("Enter Account ID: ");
+                    id = sc.nextInt();
+
+                    Account withdrawAccount = accounts.get(id);
+
+                    if (withdrawAccount == null) {
+                        System.out.println("Account Not Found!");
+                    } else {
+                        System.out.print("Enter Withdraw Amount: ");
+                        double amount = sc.nextDouble();
+
+                        if (amount <= 0) {
+                            System.out.println("Invalid Amount!");
+                        } else if (withdrawAccount.withdraw(amount)) {
+                            System.out.println("Withdrawal Successful!");
+                            System.out.println("Current Balance: ₹"
+                                    + withdrawAccount.getBalance());
+                        } else {
+                            System.out.println("Insufficient Balance!");
+                        }
+                    }
+                    break;
+
+                case 4:
                     System.out.println("Thank You!");
                     sc.close();
                     return;
