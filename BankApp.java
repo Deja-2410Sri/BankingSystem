@@ -13,7 +13,10 @@ public class BankApp {
 
             System.out.println("\n===== BANK MENU =====");
             System.out.println("1. Create Account");
-            System.out.println("2. Exit");
+            ystem.out.println("2. Deposit");
+            System.out.println("3. Withdraw");
+            System.out.println("4. Check Balance");
+            System.out.println("5. Exit");
             System.out.print("Enter your choice: ");
 
             int choice = sc.nextInt();
@@ -90,8 +93,19 @@ case 2:
                         }
                     }
                     break;
+                  case 4:
+                    System.out.print("Enter Account ID: ");
+                    id = sc.nextInt();
 
-                case 4:
+                    account = accounts.get(id);
+
+                    if (account == null) {
+                        System.out.println("Account Not Found!");
+                    } else {
+                        System.out.println("Current Balance: ₹" + account.balance);
+                    }
+                    break;
+                    case 5:
                     System.out.println("Thank You!");
                     sc.close();
                     return;
@@ -102,3 +116,4 @@ case 2:
         }
     }
 }
+            
