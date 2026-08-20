@@ -15,7 +15,7 @@ public class BankApp {
             System.out.println("1. Create Account");
             ystem.out.println("2. Deposit");
             System.out.println("3. Withdraw");
-            System.out.println("4. Check Balance");
+           //System.out.println("4. Check Balance");
             System.out.println("5. Exit");
             System.out.print("Enter your choice: ");
 
@@ -93,23 +93,7 @@ case 2:
                         }
                     }
                     break;
-                  case 4:
-                    System.out.print("Enter Account ID: ");
-                    id = sc.nextInt();
-
-                    account = accounts.get(id);
-
-                    if (account == null) {
-                        System.out.println("Account Not Found!");
-                    } else {
-                        System.out.println("Current Balance: ₹" + account.balance);
-                    }
-                    break;
-           
-
-
-                    
-                                 case 5:
+                case 5:
                     System.out.println("Thank You!");
                     sc.close();
                     return;
