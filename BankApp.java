@@ -13,8 +13,8 @@ public class BankApp {
 
             System.out.println("\n===== BANK MENU =====");
             System.out.println("1. Create Account");
-            ystem.out.println("2. Deposit");
-            System.out.println("3. Withdraw");
+            System.out.println("2. Deposit");
+            //System.out.println("3. Withdraw");
            //System.out.println("4. Check Balance");
             System.out.println("5. Exit");
             System.out.print("Enter your choice: ");
@@ -66,30 +66,6 @@ case 2:
                                     + depositAccount.getBalance());
                         } else {
                             System.out.println("Invalid Amount!");
-                        }
-                    }
-                    break;
-
-                case 3:
-                    System.out.print("Enter Account ID: ");
-                    id = sc.nextInt();
-
-                    Account withdrawAccount = accounts.get(id);
-
-                    if (withdrawAccount == null) {
-                        System.out.println("Account Not Found!");
-                    } else {
-                        System.out.print("Enter Withdraw Amount: ");
-                        double amount = sc.nextDouble();
-
-                        if (amount <= 0) {
-                            System.out.println("Invalid Amount!");
-                        } else if (withdrawAccount.withdraw(amount)) {
-                            System.out.println("Withdrawal Successful!");
-                            System.out.println("Current Balance: ₹"
-                                    + withdrawAccount.getBalance());
-                        } else {
-                            System.out.println("Insufficient Balance!");
                         }
                     }
                     break;
